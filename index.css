@@ -1,4 +1,51 @@
+:root{
+    --width : 8rem;
+}
+
 body{
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    border: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    width: var(--width);
+    padding-inline: 10px;
+    list-style-type: none;
+    animation: come-down .5s;
+}
+ul{
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 6rem;
+    overflow: auto;
+}
+div{
+    border: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    width: var(--width);
+    padding-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+i{
+    cursor: pointer;
+    text-align: end;
+    margin-top: 5px;
+}
+
+@keyframes come-down {
+    from{
+        transform: translateY(-10px);
+    }to{
+        transform: translateX();
+    }
 }
